@@ -1,23 +1,35 @@
-int8_t state = 0;          //state the game is in
-#define COLUMNS  14        //Columns of bricks
-#define ROWS 8             //Rows of bricks
-float moveX;                  //Initial movement of ball
-int8_t moveY;                 //Initial movement of ball
-float ballX;                  //Balls starting possition
-int8_t ballY;                 //Balls starting possition
-boolean released;          //If buttons has been released by the player
-boolean Free;              //If the ball is free
-int8_t xPaddle;            //X position of paddle
-boolean isHit[ROWS][COLUMNS];//Array of if bricks are hit or not
-boolean bounced = false;   //Used to fix double bounce glitch
-int8_t lives = 3;          //Amount of lives
-int8_t level = 1;          //Current level
-int16_t score = 0;         //Score for the game
-uint16_t tmpScore = 0;     //template score for HSE
+/*Copyright (C) yyyy  name of author
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+*/
+int8_t state = 0;
+#define COLUMNS  14
+#define ROWS 8
+float moveX;
+int8_t moveY;
+float ballX;
+int8_t ballY;
+bool released;
+bool Free;
+int8_t xPaddle;
+bool isHit[ROWS][COLUMNS];
+bool bounced = false;
+int8_t lives = 3;
+int8_t level = 1;
+int16_t score = 0;
+uint16_t tmpScore = 0;
 // DO NOT CHANGE THE DATATYPE, it will screw up HSE!
-int16_t brickCount;        //Amount of bricks hit
-char initials[3];          //Initials used in HSE
-bool flash = true;         //flashing of different items
+int16_t brickCount;
+char initials[3];
+bool flash = true;
 
 #include <Arduboy.h>
 Arduboy arduboy;
